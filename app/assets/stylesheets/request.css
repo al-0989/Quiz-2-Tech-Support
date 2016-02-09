@@ -1,0 +1,40 @@
+h1{
+  color: rgb(3, 16, 193);
+  text-align: center;
+}
+
+.image-container{
+  padding: 20px;
+}
+
+.navbar{
+  font-family: "Helvetica", serif;
+  color: rgb(6, 30, 84);
+}
+
+table{
+  table-layout: fixed;
+  border: 2px solid black;
+  width : 1000px;
+  margin: 20px auto;
+
+}
+
+td {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+tr:nth-child(even) {
+  background-color: rgba(35, 121, 241, 0.5);
+}
+
+th {
+  background-color: rgb(10, 91, 213);
+}
+
+.status-change{
+  width : 100px;
+  margin: 20px auto;
+}

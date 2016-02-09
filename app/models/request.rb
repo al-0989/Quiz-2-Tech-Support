@@ -14,6 +14,14 @@ class Request < ActiveRecord::Base
   where(["name ILIKE ? OR email ILIKE ? OR message ILIKE ? OR department ILIKE?", "%#{str}%", "%#{str}%","%#{str}%", "%#{str}%"])
   end
 
+  def self.search(str)
+    if str
+      find(:all, :conditions => ["name ILIKE ? OR email ILIKE ? OR message ILIKE ? OR department ILIKE?", "%#{str}%", "%#{str}%","%#{str}%", "%#{str}%"])
+    else
+      find(:all)
+    end
+  end
+
   # def self.fill_status
   #   where("status = nil").each do |element|
   #     element.update(status: "Un-done")

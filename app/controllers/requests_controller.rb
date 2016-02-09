@@ -50,9 +50,9 @@ class RequestsController < ApplicationController
     end
   end
 
-def search
-  @request = Request.wildcard_search(params[:id])
-end
+  def search
+    @request = Request.search(:search.to_s)
+  end
 
   private
 
@@ -61,6 +61,7 @@ end
   end
 
   def find_request
+    @request = Request.search(:search.to_s)
     @request = Request.find(params[:id])
   end
 end

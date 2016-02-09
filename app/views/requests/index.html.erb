@@ -3,7 +3,7 @@
 
 <%= form_tag("/requests/search", method: "get") do %>
   <%= label_tag ("Search for:") %>
-  <%= text_field_tag :id, params[:id] %>
+  <%= text_field_tag :search%>
   <%= submit_tag("Search") %>
 <% end %>
 
